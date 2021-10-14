@@ -1,3 +1,6 @@
+# How to Use ？ Saved This File to ~/.gitignore and run
+# git config --global core.excludesfile ~/.gitignore
+# enjoy !
 ##### Windows
 # Windows thumbnail cache files
 Thumbs.db
