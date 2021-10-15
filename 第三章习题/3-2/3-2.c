@@ -11,6 +11,18 @@ int main()
     fiveding = 0.03;
     // 一次存五年
     plan1 = money * (1 + fiveding * 5);
-    printf("一次存五年%f\n", plan1);
-    
+    printf("Plan1=%f\n", plan1);
+    // 先存两年期，再存三年期
+    plan2 = money * (1 + twoding * 2) * (1 + threeding * 3);
+    printf("Plan2=%f\n", plan2);
+    // 先三，再二
+    plan3 = money * (1 + threeding * 3) * (1 + twoding * 2);
+    printf("Plan3=%f\n", plan3);
+    // 一直一年
+    plan4 = money * pow(1 + oneding, 5);
+    printf("Plan4=%f\n", plan4);
+    // 活期，每季度结算一次
+    plan5 = money * pow(1 + huo / 4, 10);
+    printf("Plan5=%f\n", plan5);
+    return 0;
 }

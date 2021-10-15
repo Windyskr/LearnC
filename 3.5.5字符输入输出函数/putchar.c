@@ -18,5 +18,6 @@ int main()
     putchar(d);
     putchar('\n');
     // 还能输出换行符
+    // 如果是要输出 \ 需要 \' 进行转义
     return 0;
 }
