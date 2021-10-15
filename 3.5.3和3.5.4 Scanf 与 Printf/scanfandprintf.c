@@ -2,6 +2,8 @@
 int main()
 {
     float a, b, c;
+    // scanf中%f对应float，%lf对应double；printf中因为float会自动提升类型到double，所以只需要%f就行了。Longdouble 才是 Lf。
+    // http://bbs.bccn.net/thread-440665-1-1.html #6
     scanf("a=%f,%f,1+%f", &a, &b, &c);
     // scanf（格式控制,输出表列）
     // 注意输入格式，必须对应。
