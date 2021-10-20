@@ -8,8 +8,10 @@ int main()
     if (x != 0)
         if (x > 0)
             y = 1;
-        else
+    else
             y = 0;
     printf("x=%d,y=%d\n", x, y);
     return 0;
 }
+
+// else 只能与最近的 if 配对，参考 例题4.5
