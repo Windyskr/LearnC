@@ -3,20 +3,25 @@
 int main()
 {
     double x, fx;
-    printf("X=");
-    scanf("%lf", &x);
-    if (x < 0 && x != -4)
-    {
-        fx = 2 * pow(x, 2) + 3 * x - 4;
+    int i;
+    float a[7] = {-0.3, -1.0, 0.5, 2.5, 3.5, 4.5, 5.5};
+    // -0.3，-1.0，0.5，1.5，2.5，3.5，4.5，5.5
+    for (i=1;i<=6;i++)
+    {   
+        x = a[i];
+        if (x < 0 && x != -4)
+        {
+            fx = 2 * pow(x, 2) + 3 * x - 4;
+        }
+        else if (x >= 0 && x < 10 && x != 1 && x != 5)
+        {
+            fx = 2 * pow(x, 2) - 6 * x + 5;
+        }
+        else
+        {
+            fx = 2 * pow(x, 2) - 4 * x - 1;
+        }
+        printf("X=%f,f(x)=%f\n",x, fx);
     }
-    else if (x >= 0 && x < 10 && x != 1 && x != 5)
-    {
-        fx = 2 * pow(x, 2) - 6 * x + 5;
-    }
-    else
-    {
-        fx = 2 * pow(x, 2) - 4 * x - 1;
-    }
-    printf("f(x)=%f\n", fx);
     return 0;
 }
