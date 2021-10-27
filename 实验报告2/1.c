@@ -4,7 +4,7 @@ int main()
     int zhengshu1, zhengshu2;
     printf("请输入两个正整数:");
     scanf("%d,%d", &zhengshu1, &zhengshu2);
-    if ((zhengshu1 % zhengshu2==0) || (zhengshu2 % zhengshu1==0))
+    if ((zhengshu1 % zhengshu2 == 0) || (zhengshu2 % zhengshu1 == 0))
     {
         printf("有倍数关系\n");
     }
