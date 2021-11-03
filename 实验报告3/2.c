@@ -3,26 +3,16 @@
 #include <math.h>
 #include <stdio.h>
 int main() {
-    int n, i, tmp[5], x, m;
+    int n, i, tmp[5], x, m = 0;
     printf("请输入一个五位以内的整数:");
     scanf("%d", &n);
     if (n < 100000 && n >= 0) {
-        if (n < 10) {
-            printf("这是一个一位数\n");
-            m = 1;
-        } else if (n < 100) {
-            printf("这是一个两位数\n");
-            m = 2;
-        } else if (n < 1000) {
-            printf("这是一个三位数\n");
-            m = 3;
-        } else if (n < 10000) {
-            printf("这是一个四位数\n");
-            m = 4;
-        } else {
-            printf("这是一个五位数\n");
-            m = 5;
+        x = n;
+        while (x != 0) {
+            x = x / 10;
+            m++;
         }
+        printf("这是一个%d位数\n", m);
         for (i = 0; i <= m - 1; i++) {
             tmp[i] = n / (int)(pow(10, i)) % 10;
             printf("%d", tmp[i]);
@@ -31,6 +21,13 @@ int main() {
             }
         }
         printf("\n");
+        for (i = m-1; i >= 0; i--) {
+            printf("%d", tmp[i]);
+            if (i != 0) {
+                printf(",");
+            }
+        }
+        printf ("\n");
     } else {
         printf("输入错误！\n");
     }
