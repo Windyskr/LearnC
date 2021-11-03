@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 int main() {
-    int n = 100, i, t = 1, tmp[20], m, tx, n1;
+    int n = 6, i, t = 1, tmp[20], m, tx, n1;
     n1 = n;
     tmp[0] = 1;
     printf("1是一个因子\n");
@@ -20,7 +20,7 @@ int main() {
     for (m = 0, tx = 0; m < t; m++) {
         tx = tx + tmp[m];
     }
-    if (tx == n) {
+    if (tx == n1) {
         printf("%d这是一个完全数\n", n1);
     } else {
         printf("%d这不是一个完全数\n", n1);
