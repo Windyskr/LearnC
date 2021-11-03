@@ -13,21 +13,21 @@ int main() {
             m++;
         }
         printf("这是一个%d位数\n", m);
-        for (i = 0; i <= m - 1; i++) {
+        for (i = m - 1; i >= 0; i--) {
             tmp[i] = n / (int)(pow(10, i)) % 10;
-            printf("%d", tmp[i]);
-            if (i < m - 1) {
-                printf(",");
-            }
-        }
-        printf("\n");
-        for (i = m-1; i >= 0; i--) {
             printf("%d", tmp[i]);
             if (i != 0) {
                 printf(",");
             }
         }
-        printf ("\n");
+        printf("\n");
+        for (i = 0; i <= m - 1; i++) {
+            printf("%d", tmp[i]);
+            if (i < m-1) {
+                printf(",");
+            }
+        }
+        printf("\n");
     } else {
         printf("输入错误！\n");
     }
