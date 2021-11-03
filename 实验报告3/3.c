@@ -7,12 +7,11 @@ int main() {
     n1 = n;
     tmp[0] = 1;
     printf("1是一个因子\n");
-    for (i = 2; i <= n; i++) {
+    for (i = 2; i < n; i++) {
         if (n % i != 0) {
             printf("%d不是是一个因子\n", i);
         } else {
             printf("%d是一个因子\n", i);
-            n = n / i;
             tmp[t] = i;
             t++;
         }
