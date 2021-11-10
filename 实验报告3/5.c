@@ -25,7 +25,8 @@ int main() {
             // 判断是否是第一行
             if (i != 1) {
                 // 如果是，输出中间空格。
-                // 找规律，n = 5 时，第一行 0 个，第二行 1 个，第三行 3 个，第四行 5 个.
+                // 找规律，n = 5 时，第一行 0 个，第二行 1 个，第三行 3
+                // 个，第四行 5 个.
                 for (space = 1; space < 2 * (i - 1); space++) {
                     printf(" ");
                 }
@@ -54,7 +55,6 @@ int main() {
                 for (space = 1; space < 2 * (n - i - 1); space++) {
                     printf(" ");
                 }
-                // i ++;
                 printf("%c", init - zimu);
                 zimu++;
             }
