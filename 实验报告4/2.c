@@ -16,7 +16,7 @@ void print() {
     }
 }
 int main() {
-    k = 10, n = 10;
+    scanf("%d%d", &k, &n);
     print();
     return 0;
 }

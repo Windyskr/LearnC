@@ -14,8 +14,12 @@ int strFind(char str[], char c) {
 int main() {
     char str[30];
     char c;
+    int i = 0;
     printf("请输入字符串:");
-    gets(str);
+    while ((c = getchar()) != '\n') {
+        str[i] = c;
+        i++;
+    }
     printf("输入字符:");
     scanf("%c", &c);
     if (strFind(str, c) == -1) {
