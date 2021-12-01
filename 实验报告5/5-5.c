@@ -43,8 +43,8 @@ int main() {
             // ⑤如果按上面规则确定的位置上已有数，或上一个数是第1行第n列时，则把下一个数放在上一个数的下面，
             if ((i == 0 && j == n - 1)) {  // (1,n) 放下面
                 printf("1\n");
-                i = i;
-                j = j + 1;
+                i = i + 1;
+                j = j;
             } else if ((j == n - 1) && (arr[i - 1][0] == 0)) {  // (x,n)
                 printf("2\n");
                 i = i - 1;                                      // 行数减1
@@ -53,15 +53,14 @@ int main() {
                 printf("3\n");
                 i = n - 1;  // 行 n
                 j = j + 1;  //列 +1
-            } else if ((j == n - 1) ||
-                       (i == 0)) {  //上面被占据的情况，就是要放在下面
+            } else if (arr[i - 1][j + 1] == 0) {
                 printf("4\n");
-                i = i;
+                i = i - 1;
                 j = j + 1;
             } else {
                 printf("5\n");
-                i = i - 1;
-                j = j + 1;
+                i = i + 1;
+                j = j;
             }
             arr[i][j] = sz;
             printf("arr[%d][%d] = %d\n", i, j, sz);
