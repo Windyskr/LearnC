@@ -1,20 +1,4 @@
 #include <stdio.h>
-// int num[3];
-// int select() {
-//     char num[3];
-//     int i = 0;
-//     int n = 0;
-//     for (; i < 8; i++) {
-//         if (arr[i]) {
-//             num[n] = arr[i];
-//             arr[i] = 0;
-//             n++;
-//         }
-//     }
-//     // 返回格式化后的数字
-//     return (num[0] * 100 + num[1] * 10 + num[2]);
-// }
-
 int main() {
     int a, b, c, kase = 0;
     // 百位
@@ -32,17 +16,41 @@ int main() {
                 if (!arr[ci]) continue;
                 c = arr[ci];
                 arr[ci] = 0;
-                // 输出
-                printf("num1 = %d", 100 * a + 10 * b + c);
+                int num1, num2, num3;
+                // 生成 num1, 它是   a b c
+                num1 = 100 * a + 10 * b + c;
+                // 生成 num 2,分解为 d e f
+                num2 = 2 * num1;
+                int d = num2 / 100 % 10, e = num2 / 10 % 10, f = num2 % 10;
+                // 分解 num 3,分解为 h i j
+                num3 = 3 * num1;
+                int h = num3 / 100 % 10, i = num3 / 10 % 10, j = num3 % 10;
+                if ((e != 0) && (f != 0) && (i != 0) && (j != 0)) {
+                    // printf("\n%d %d %d\n", num1, num2, num3);
+                    // 放到数组中
+                    char tmp[9] = {a, b, c, d, e, f, h, i, j};
+                    // 找不一样
+                    int flag = 0;
+                    for (int fi = 0; fi < 9; fi++) {
+                        for (int fn = 0; fn < fi; fn++) {
+                            // printf("%d %d\n", tmp[fi], tmp[fn]);
+                            if (fn != fi && tmp[fi] == tmp[fn]) {
+                                // 如果它有相等，证明他不是一个互不相同的数字
+                                // printf("Fuck1");
+                                flag = 1;
+                            }
+                        }
+                    }
+                    // 如果flag是0，他是一个互不相同的数字
+                    if (!(flag))
+                        printf("找到你了！ %d %d %d\n", num1, num2, num3);
+                }
+                // 恢复数字
+                // arr[ai] = a;
+                arr[bi] = b;
+                arr[ci] = c;
             }
         }
-        // 判断是否是对的
-        // printf("%d %d %d\n", num1, num2, num3);
-        // if ((2 * num1 == num2) && (3 * num1 == num3)) {
-        //     printf("%d %d %d", num1, num2, num3);
-        //     if (++kase) printf("\n");
-        // }
-        // // 一次选择完成，恢复数列
     }
     return 0;
 }
