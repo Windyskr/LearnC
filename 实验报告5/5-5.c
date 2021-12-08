@@ -69,7 +69,7 @@ int main() {
         // 输出测试下
         for (int ix = 0; ix < n; ix++) {
             for (int jx = 0; jx < n; jx++) {
-                printf(" %3d", arr[ix][jx]);
+                printf("%3d", arr[ix][jx]);
             }
             printf("\n");
         }
