@@ -47,10 +47,10 @@ int func(int *a, int n) {
 }
 int main() {
     //形参n表示数组中元素的个数，
-    int n = 7;
-    int a[] = {0, 4, 1, 2, 0, 0, 1};
+    int n = 8;
+    int a[] = {2, 4, 1, 2, 0, 0, 1, 9};
     printf("原数组中第一个值为零的元素的下标:%d\n", func(a, n));
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < n; i++) {
         printf("%3d ", a[i]);
     }
     printf("\n");
