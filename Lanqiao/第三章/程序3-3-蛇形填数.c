@@ -1,21 +1,20 @@
 #include <stdio.h>
 #include <string.h>
-int snake[8][8];
+#define maxn 20
+int a[maxn][maxn];
 int main() {
-    int n;
+    int n, x, y, tot = 0;
     scanf("%d", &n);
-    memset(snake, 0, sizeof(int) * n);
-    snake[0][n - 1] = 1;
-    for (int i = 1; i <= (n * n); i++) {
-        // 不会填了
+    tot = a[x = 0][y = n - 1] = 1;
+    while (tot < n * n) {
+        while (x + 1 < n && !a[x + 1][y]) a[++x][y] = ++tot;
+        while (y - 1 >= 0 && !a[x][y - 1]) a[x][--y] = ++tot;
+        while (x - 1 >= 0 && !a[x - 1][y]) a[--x][y] = ++tot;
+        while (y + 1 < n && !a[x][y + 1]) a[x][++y] = ++tot;
     }
-    printf("\n");
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            printf("%2d", snake[i][j]);
-        }
+    for (x = 0; x < n; x++) {
+        for (y = 0; y < n; y++) printf("%3d", a[x][y]);
         printf("\n");
     }
-
     return 0;
 }
