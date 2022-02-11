@@ -1,0 +1,17 @@
+{
+    "code-runner.executorMap": {
+        "c": "cd $dir && clang $fileName -std=c99 -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && clang++ $fileName -std=c++17 -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    },
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "search.useGlobalIgnoreFiles": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnPaste": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "editor.formatOnSave": true,
+}

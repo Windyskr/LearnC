@@ -5,6 +5,7 @@ int main() {
     cin >> n;
     string maxname, minname, maxnum, minnum, name, num;
     for (int i = 0; i < n; i++) {
+        // 学习用法
         cin >> name >> num >> score;
         if (max < score) {
             max = score;
