@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cstdio>
+#include <cstring>
 #include <iostream>
 using namespace std;
 int n;        // n 是数字
@@ -14,7 +15,7 @@ void dfs(int u) {
             }
         }
         printf("\n");
-        return;
+
     } else {
         // 如果没有递归完呢
 
