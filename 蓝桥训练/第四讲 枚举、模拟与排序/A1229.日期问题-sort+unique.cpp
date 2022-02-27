@@ -70,3 +70,5 @@ int main() {
         printf("%d-%02d-%02d\n", d[j].year, d[j].month, d[j].day);
     return 0;
 }
+
+// https://blog.csdn.net/qq_29344757/article/details/73744556
