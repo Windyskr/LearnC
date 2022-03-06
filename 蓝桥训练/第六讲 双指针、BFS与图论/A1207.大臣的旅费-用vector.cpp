@@ -6,9 +6,11 @@
 using namespace std;
 
 const int N = 1e5 + 10;
+// 可到达的 id 和 长度
 struct Node {
     int id, w;
 };
+// 对每一 id 开一个vector
 vector<Node> road[N];
 int dist[N];
 
@@ -29,7 +31,7 @@ int main() {
         road[p].push_back({q, d});
         road[q].push_back({p, d});
     }
-    // 开始第一次 dfs
+    // 先从 1 节点进行，没有任何点下去，所以传 -1
     dfs(1, -1, 0);
 
     // 找最大
