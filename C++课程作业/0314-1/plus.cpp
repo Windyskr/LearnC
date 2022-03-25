@@ -5,4 +5,3 @@ Box::Box(int h, int w, int len) {
     width = w;
     length = len;
 };
-int Box::volume() { return height * width * length; }
