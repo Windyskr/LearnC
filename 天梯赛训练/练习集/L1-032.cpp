@@ -13,7 +13,7 @@ int main() {
     getline(cin, s);
     if (s.size() > n) {
         // 切除
-        s = s.substr(s.size() - n + 1);
+        s = s.substr(s.size() - n);
     } else {
         // 补充
         int t = n - s.size();

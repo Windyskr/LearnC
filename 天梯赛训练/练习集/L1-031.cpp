@@ -11,11 +11,12 @@ int main() {
         float h, w;
         cin >> h >> w;
         float s = 2 * (h - 100) * 0.9;
-        if (w > 0.9 * s && w < 1.1 * s)
+
+        if (abs(s - w) < s * 0.1)
             cout << "You are wan mei!" << endl;
-        else if (w <= 0.9 * s)
+        else if (w <= s)
             cout << "You are tai shou le!" << endl;
-        else if (w >= 1.1 * s)
+        else
             cout << "You are tai pang le!" << endl;
     }
 
