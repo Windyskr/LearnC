@@ -2,7 +2,7 @@
 #include <cstring>
 #include <iostream>
 using namespace std;
-
+// https://www.liuchuo.net/archives/1943
 string t;
 int a, b;
 

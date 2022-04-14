@@ -4,7 +4,8 @@
 #include <set>
 #include <vector>
 using namespace std;
-
+// 题目没看明白，所以只能得一半的分
+// https://www.liuchuo.net/archives/1613
 int n, k;
 set<int> s, q;
 vector<int> v;
